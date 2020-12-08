@@ -4,8 +4,11 @@ header {
     height: 30rem;
     color: white;
 
+    @include touch {
+      height: auto;
+    }
+
     .hero-body {
-      // TODO: make it responsive
       display: flex;
       flex-direction: column;
       justify-content: center;
