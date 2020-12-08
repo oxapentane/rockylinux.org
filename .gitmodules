@@ -1,0 +1,4 @@
+[submodule "themes/rockylinux"]
+	path = themes/rockylinux
+	url = https://github.com/fibreblazer/rockylinux-landingpage
+	branch = template
