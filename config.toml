@@ -1,3 +1,4 @@
 baseURL = "https://rockylinux.org/"
 languageCode = "en-us"
 title = "Rocky Linux"
+theme = "rockylinux"
