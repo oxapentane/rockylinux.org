@@ -1,7 +1,7 @@
 header {
   .hero-head {
     background-image: linear-gradient(#3C8B4E, #9CBC58);
-    height: 30rem;
+    height: rem;
     color: white;
 
     @include touch {
@@ -12,6 +12,12 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      .download-button {
+        width: 14rem;
+        margin: 2rem auto;
+        font-size: 1.5rem;
+      }
     }
 
     .navbar-menu {
