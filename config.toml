@@ -1,35 +1,44 @@
 baseURL = "https://rockylinux.org/"
 languageCode = "en-us"
 title = "Rocky Linux"
-theme = "rockylinux"
+theme = "cayman-hugo-theme"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+  # Header text, can be markdown
+  project_name = "Rocky Linux"
+  project_tagline = "A community-driven effort to create enterprise-grade, production-ready Linux."
 
-  homeSubtitle = " community-driven effort bringing you enterprise-grade, production-ready Linux."
+  # Date format for post list and single pages
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "2006-01-02"
 
+  # Footer text, can be markdown
+  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cayman](https://github.com/zwbetz-gh/cayman-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
 
-[menu]
+  # If true, the CSS/JS for Katex math typesetting are enabled
+  katex = true
 
-  [[menu.main]]
-    name = "Community"
-    url = "community/"
-    weight = 10
+  # Breakpoints
+  large_breakpoint = "64em"
+  medium_breakpoint = "42em"
 
-  [[menu.main]]
-    name = "About"
-    url = "about/"
-    weight = 20
+  # Header colors
+  header_heading_color = "#fff"
+  header_background_color = "#159957"
+  header_background_color_secondary = "#155799"
 
-  [[menu.main]]
-    name = "Download"
-    url = "download/"
-    weight = 15
+  # Text colors
+  section_headings_color = "#159957"
+  body_text_color = "#606c71"
+  body_link_color = "#1e6bb8"
+  blockquote_text_color = "#819198"
 
-  [[menu.main]]
-    name = "Documentation"
-    url = "documentation/"
-    weight = 15
+  # Code colors
+  code_background_color = "#f3f6fa"
+  code_text_color = "#567482"
