@@ -42,3 +42,17 @@ theme = "cayman-hugo-theme"
   # Code colors
   code_background_color = "#f3f6fa"
   code_text_color = "#567482"
+
+[menu]
+  [[menu.nav]]
+    name = "freenode"
+    url = "https://webchat.freenode.net/#rockylinux"
+    weight = 1
+  [[menu.nav]]
+    name = "matrix"
+    url = "https://matrix.to/#/+rockylinux:matrix.org"
+    weight = 2
+  [[menu.nav]]
+    name = "forum"
+    url = "https://forums.rockylinux.org"
+    weight = 3
