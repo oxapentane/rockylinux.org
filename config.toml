@@ -56,3 +56,7 @@ theme = "cayman-hugo-theme"
     name = "forum"
     url = "https://forums.rockylinux.org"
     weight = 3
+  [[menu.nav]]
+    name = "about"
+    url = "/about"
+    weight = 4
