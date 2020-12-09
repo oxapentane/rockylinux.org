@@ -15,53 +15,16 @@
     </div>
 
     <div id="navbar-menu" class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item">
-          <span class="icon">
-            <i class="fas fa-user"></i>
-          </span>
-          <span>
-            Community
-          </span>
-        </a>
-
-        <a class="navbar-item">
-          <span class="icon">
-            <i class="fas fa-info-circle"></i>
-          </span>
-          <span>
-            About
-          </span>
-        </a>
-
-        <a class="navbar-item">
-          <span class="icon">
-            <i class="fas fa-download"></i>
-          </span>
-          <span>
-            Download
-          </span>
-        </a>
-
-        <a class="navbar-item">
-          <span class="icon">
-            <i class="fas fa-file"></i>
-          </span>
-          <span>
-            Documentation
-          </span>
-        </a>
-
         {{- range .Site.Menus.main }}
         <a class="navbar-item" href="{{ .URL | absLangURL }}" >
             <span class="icon">
-            <i class="{{ .Faiconname }}"></i>
+            <i class="{{ .faiconname }}"></i>
             </span>
             <span>
                 {{ .Name }}
             </span>
         </a>
         {{ end }}
-      </div>
     </div>
+    
   </nav>

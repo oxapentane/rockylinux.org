@@ -1,12 +1,17 @@
 <header>
-    <div class="hero hero-head">
-      
-      <div class="hero-body has-text-centered">
-        <h1 class="is-size-1 is-size-3-touch has-text-weight-bold">The Rocky Linux Project</h1>
-        <h2 class="is-size-4 is-size-6-touch">A community-driven effort bringing you<br />
-          enterprise-grade, production-ready Linux.</h2>
-
+    
+  <div class="hero hero-head">      
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        {{ partialCached "menu.html" . }}
+      </nav>
+      <div class="hero-body has-text-centered">        
+        <h1 class="is-size-1 is-size-3-touch has-text-weight-bold" id="home-title">
+          {{ .Site.title }}</h1>
+        {{- with .Site.Params.homeSubtitle }}
+        <h2 class="is-size-4 is-size-6-touch" id="home-subtitle">{{.}}</h2>
+        {{- end }}
         <button class="button download-button">Download</button>
       </div>
     </div>
-  </header>
+
+</header>

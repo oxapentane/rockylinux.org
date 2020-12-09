@@ -7,14 +7,14 @@
         {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "css/main.css" . -}}
         <link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous">
         <title>{{.Title}}</title>
-      </head>
+    </head>
 
     <body>
-        {{- partial "header" . -}}        
+        { block "header" . -}}{{ end -}}
         <main>
             {{ block "main" . -}}{{ end -}}
-        </main>        
-        {{ partial "footer" . -}}
+        </main>
+	    {{ block "footer" . -}}{{ end }}
         
         {{ $main := resources.Get "js/gulpfile.js" -}}
         <script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
