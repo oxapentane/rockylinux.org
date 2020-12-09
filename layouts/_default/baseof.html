@@ -6,8 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "css/main.css" . -}}
         <link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous">
-        <!-- todo: don't use CDN maybe -->
-        <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
         <title>{{.Title}}</title>
       </head>
 
@@ -20,7 +18,9 @@
         
         {{ $main := resources.Get "js/gulpfile.js" -}}
         <script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
-        
+        <!-- todo: don't use CDN maybe -->
+        <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
     </body>
 
 </html>
