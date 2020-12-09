@@ -38,8 +38,8 @@ jobs:
       run: hugo -D
 
     # Step 4 - Create name file
-    - name: Create cname file
-      run: echo 'rockylinux.org' > public/CNAME
+    #- name: Create cname file
+    #  run: echo 'rockylinux.org' > public/CNAME
 
     # Step 5 - Push our generated site to our gh-pages branch
     - name: Deploy
